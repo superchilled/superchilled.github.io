@@ -1,0 +1,317 @@
+/*
+  ========================================
+  Reset
+  ========================================
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+  ========================================
+  ========================================
+  Default Styles
+  ========================================
+  ========================================
+*/
+
+/*
+  ========================================
+  Grid
+  ========================================
+*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+  background-color: rgb(247, 247, 247);
+  color: rgb(46, 49, 51);
+}
+
+/*
+  ========================================
+  Main Header
+  ========================================
+*/
+
+.main-header {
+  width: 100%;
+}
+
+.main-header a {
+  width: 260px;
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+  color: rgb(46, 49, 51);
+}
+
+.main-header h1 {
+  width: 260px;
+  margin: 0 auto;
+  font-size: 46px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  padding: 20px 0;
+  color: rgb(140, 198, 63);
+}
+
+
+/*
+  ========================================
+  Content
+  ========================================
+*/
+
+main {
+  width: 90%;
+  padding-top: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  font: 20px/1.6 'Libre Baskerville', serif;
+  border-bottom: 10px solid rgb(0, 104, 55);
+}
+
+.headshot-photo {
+  max-width: 250px;
+  border-radius: 50%;
+  padding: 0 10px 10px 0;
+}
+
+main p {
+  margin-bottom: 40px;
+}
+
+main p:first-child {
+  margin-top: 2em;
+}
+
+.main-content p:last-child {
+  padding-bottom: 3em;
+  border-bottom: 10px solid rgb(0, 104, 55);
+}
+
+main a {
+  text-decoration: none;
+  padding: 0 1.5px;
+  color: rgb(140, 198, 63);
+}
+
+main a:hover, main a:focus {
+  color: rgb(0, 104, 55);
+  transition-property: color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+
+main p em, main p i {
+  font-style: italic;
+}
+
+main hr {
+  color: rgb(0, 104, 55);
+  size: 50px;
+}
+
+/*
+  ========================================
+  ========================================
+  Media-Query-specific Styles
+  ========================================
+  ========================================
+*/
+
+/*
+  ========================================
+  Headshot Photo Styles
+  ========================================
+*/
+
+@media (max-width: 600px) {
+  .headshot-photo {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+}
+
+@media (min-width: 601px) {
+  .headshot-photo {
+    float: left;
+    /*padding-bottom: 5px;*/
+    padding-right: 20px;
+  }
+}
+
+/*
+  ========================================
+  Narrow
+  ========================================
+*/
+
+@media (min-width: 420px) and (max-width: 767px) {
+
+/*Main Header*/
+
+.main-header a {
+  width: 300px;
+}
+
+.main-header h1 {
+  width: 320px;
+  font-size: 48px;
+}
+
+/*Footer*/
+
+body {
+  margin-bottom: 220px; /* margin-bottom = footer height + 20px */
+}
+
+footer {
+    height: 200px;
+}
+
+}
+
+/*
+  ========================================
+  Medium
+  ========================================
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+
+
+/*Content*/
+
+.main-header a {
+  width: 350px;
+}
+
+.main-header h1 {
+  width: 370px;
+  font-size: 60px;
+}
+
+.main-header h2 {
+  font-size: 40px;
+}
+
+}
+
+/*
+  ========================================
+  Wide
+  ========================================
+*/
+
+@media (min-width: 1025px) {
+
+
+/*Main Header*/
+
+.main-header a {
+  width: 420px;
+  margin-top: 30px;
+}
+
+
+.main-header h1 {
+  width: 420px;
+  font-size: 72px;
+}
+
+/*Content*/
+
+.article-header h1 {
+  font-size: 28px;
+}
+
+.main-content {
+  font-size: 1.6em;
+}
+
+}
+
+/*
+  ========================================
+  Extra-Wide
+  ========================================
+*/
+
+@media (min-width: 1600px) {
+
+/*Main Header*/
+
+.main-header a {
+  width: 420px;
+  margin-top: 30px;
+}
+
+
+.main-header h1 {
+  width: 420px;
+  font-size: 80px;
+}
+
+
+}
